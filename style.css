@@ -1,0 +1,90 @@
+/* GLOBAL STYLES - Demonstrating cascading behavior */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6; /* Light background */
+    color: #333;               /* Dark text for readability */
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+/* REUSABLE CLASS - Refactored for repetitive sections */
+.container-box {
+    background-color: #ffffff;
+    border: 1px solid #ddd;    /* Visible border to see the box */
+    padding: 20px;             /* Space inside the box */
+    margin-bottom: 20px;       /* Space between boxes */
+    border-radius: 8px;        /* Softens the corners */
+}
+
+/* TYPOGRAPHY - Improving visual hierarchy */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2 {
+    border-bottom: 2px solid #3498db; /* Visual separator */
+    padding-bottom: 5px;
+    color: #3498db;
+}
+
+/* LIST STYLES */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* --- FLEXBOX NAVIGATION --- */
+.nav-links {
+    display: flex;               /* Enables Flexbox on the list parent */
+    justify-content: space-around; /* Distributes links evenly with space around them */
+    align-items: center;         /* Centers links vertically */
+    list-style: none;
+    padding: 15px;
+    background: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* --- FLEXBOX CARD LAYOUT --- */
+.card-container {
+    display: flex;               /* Parent container becomes a flexbox */
+    flex-direction: row;         /* Aligns cards in a horizontal row by default */
+    flex-wrap: wrap;             /* Allows cards to drop to the next line on small screens */
+    gap: 20px;                   /* Creates consistent spacing between cards */
+    justify-content: center;     /* Centers the row of cards */
+}
+
+.card {
+    flex: 1 1 250px;             /* Growth: 1, Shrink: 1, Basis: 250px (Flexible sizing) */
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+/* For very small screens, we ensure the layout stacks vertically */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column;  /* Stacks navigation links vertically on mobile */
+        gap: 10px;
+    }
+}
+
+/* DEBUGGING - Use these temporary styles to visualize spacing */
+/* .debug {
+    outline: 2px dashed red;
+    background-color: rgba(255, 0, 0, 0.1);
+} 
+*/
